@@ -17,7 +17,8 @@ const dbURL = "mongodb+srv://prasadkshirsagar1199:wdIBbFfQ5QaLqGto@cluster0.9fjx
 
 
 async function main(){
-    await mongoose.connect(dbURL)
+    // await mongoose.connect(dbURL)
+    return 1;
 
 }
 
