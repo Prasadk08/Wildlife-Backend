@@ -3,8 +3,8 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-let {data }= require('./model/animal')
-let {pdata }= require('./model/programdata')
+
+
 const Program = require('./model/program');
 
 const cors = require('cors');
