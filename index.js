@@ -4,13 +4,18 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-
 const Program = require('./model/program');
+const AnimalCard = require('./model/animalcard');
+
 
 const cors = require('cors');
 app.use(cors());
 
-const AnimalCard = require('./model/animalcard');
+app.use(cors({
+  origin: "https://wildlife-xdqb.onrender.com",
+}));
+
+
 
 const dbURL = "mongodb+srv://prasadkshirsagar1199:wdIBbFfQ5QaLqGto@cluster0.9fjxaei.mongodb.net/Wildlife?retryWrites=true&w=majority&appName=Cluster0";
 
