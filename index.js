@@ -11,9 +11,9 @@ const AnimalCard = require('./model/animalcard');
 const cors = require('cors');
 app.use(cors());
 
-// app.use(cors({
-//   origin: "https://wildlife-xdqb.onrender.com",
-// }));
+app.use(cors({
+  origin: "https://wildlife-xdqb.onrender.com",
+}));
 
 
 
