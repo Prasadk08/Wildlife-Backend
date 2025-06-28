@@ -17,7 +17,7 @@ app.use(cors());
 
 
 
-const dbURL = "mongodb+srv://prasadkshirsagar1199:O6ZK2KnzUHLWqMvV@cluster0.9fjxaei.mongodb.net/Wildlife?retryWrites=true&w=majority&appName=Cluster0";
+const dbURL = "mongodb+srv://prasadkshirsagar1199:CuaTeOtS0c0kstlu@cluster0.9fjxaei.mongodb.net/Wildlife?retryWrites=true&w=majority&appName=Cluster0";
 
 
 
