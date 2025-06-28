@@ -11,14 +11,14 @@ const AnimalCard = require('./model/animalcard');
 const cors = require('cors');
 app.use(cors());
 
-app.use(cors({
-  origin: "https://wildlife-xdqb.onrender.com",
-}));
+// app.use(cors({
+//   origin: "https://wildlife-xdqb.onrender.com",
+// }));
 
 
 
-const dbURL = "mongodb+srv://prasadkshirsagar1199:wdIBbFfQ5QaLqGto@cluster0.9fjxaei.mongodb.net/Wildlife?retryWrites=true&w=majority&appName=Cluster0";
-
+const dbURL = "mongodb+srv://prasadkshirsagar1199:wRznkiD6eSW4xnfd@cluster0.9fjxaei.mongodb.net/Wildlife?retryWrites=true&w=majority&appName=Cluster0";
+// wdIBbFfQ5QaLqGto
 
 
 async function main(){
