@@ -12,9 +12,11 @@ const cors = require('cors');
 app.use(cors());
 
 app.use(cors({
-  origin: "https://wildlife-xdqb.onrender.com",
+  origin: [
+    "http://localhost:5173",
+    "https://wildlife-xdqb.onrender.com"
+  ]
 }));
-
 
 
 const dbURL = "mongodb+srv://prasadkshirsagar1199:CuaTeOtS0c0kstlu@cluster0.9fjxaei.mongodb.net/Wildlife?retryWrites=true&w=majority&appName=Cluster0";
