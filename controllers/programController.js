@@ -1,4 +1,4 @@
-import Program from '../model/program.js';
+import Program from "../model/program.js";
 
 exports.getAllPrograms = async (req, res) => {
   try {

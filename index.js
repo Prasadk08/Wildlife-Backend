@@ -2,10 +2,13 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import app from "./app.js";
 
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+  require('dotenv').config();
+}
+
 connectDB();
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on ${PORT}`);
