@@ -1,6 +1,6 @@
 import JoinTeam from '../model/joinTeam.js';
 
-exports.joinTeam = async (req, res) => {
+export const joinTeam = async (req, res) => {
   try {
     const { name, email, message } = req.body;
 

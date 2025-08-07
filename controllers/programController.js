@@ -1,6 +1,6 @@
 import Program from "../model/program.js";
 
-exports.getAllPrograms = async (req, res) => {
+export const getAllPrograms = async (req, res) => {
   try {
     const programs = await Program.find();
     res.status(200).json(programs);
@@ -10,7 +10,7 @@ exports.getAllPrograms = async (req, res) => {
   }
 };
 
-exports.getProgramById = async (req, res) => {
+export const getProgramById = async (req, res) => {
   try {
     const program = await Program.findById(req.params.id);
     if (!program) {
@@ -23,7 +23,7 @@ exports.getProgramById = async (req, res) => {
   }
 };
 
-exports.deleteProgramById = async (req, res) => {
+export const deleteProgramById = async (req, res) => {
   try {
     const program = await Program.findByIdAndDelete(req.params.id);
     if (!program) {

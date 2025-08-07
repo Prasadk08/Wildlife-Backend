@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+
+import mongoose from "mongoose";
 
 const animalCardSchema = new mongoose.Schema({
     name:String,

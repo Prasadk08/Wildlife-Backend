@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+
+import mongoose from "mongoose";
 
 const programSchema = new mongoose.Schema({
     pname:String,

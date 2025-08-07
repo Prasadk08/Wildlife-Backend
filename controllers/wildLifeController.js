@@ -1,7 +1,9 @@
-import WildLife from '../model/wildLife.js';
+import WildLife from '../model/wildLife.js'
 
-exports.getAllWildlife = async (req, res) => {
+
+export const getAllWildlife = async (req, res) => {
   try {
+    console.log("Fetching all wildlife data");
     const wildlife = await WildLife.find();
     res.status(200).json(wildlife);
   } catch (error) {

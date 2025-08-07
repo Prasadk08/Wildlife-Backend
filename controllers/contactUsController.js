@@ -1,6 +1,6 @@
-import ContactUs from "../model/contactUs";
+import ContactUs from "../model/contactUs.js";
 
-exports.contactUs = async (req, res) => {
+export const contactUss = async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
