@@ -10,4 +10,4 @@ const animalCardSchema = new mongoose.Schema({
 })
 
 const AnimalCard = mongoose.model('AnimalCard', animalCardSchema);
-module.exports = AnimalCard;
+export default AnimalCard;

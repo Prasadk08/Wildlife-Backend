@@ -8,4 +8,4 @@ const programSchema = new mongoose.Schema({
 });
 
 const Program = mongoose.model("Program", programSchema);
-module.exports = Program;
+export default Program;

@@ -1,62 +1,36 @@
+import dotenv from "dotenv";
+import connectDB from "./config/db.js";
+import app from "./app.js";
 
+dotenv.config();
+connectDB();
 
-const express = require('express');
-const app = express();
-const mongoose = require('mongoose');
+const PORT = process.env.PORT || 8080;
 
-const Program = require('./model/program');
-const AnimalCard = require('./model/animalcard');
-
-
-const cors = require('cors');
-app.use(cors());
-
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://wildlife-xdqb.onrender.com"
-  ]
-}));
-
-
-const dbURL = "mongodb+srv://prasadkshirsagar1199:CuaTeOtS0c0kstlu@cluster0.9fjxaei.mongodb.net/Wildlife?retryWrites=true&w=majority&appName=Cluster0";
-
-
-
-async function main(){
-    await mongoose.connect(dbURL)
-}
-
-main().then(async () => {
-    console.log("Connected to MongoDB");
-
-}).catch(err => {
-    console.error("Error connecting to MongoDB:", err);
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on ${PORT}`);
 });
 
-app.listen(8080,()=>{
-    console.log("Server is running on port 8080");
-})
 
 
-app.get('/getAnimalCards', async (req, res) => {
-    try {
-        console.log("Calling server")
-        const animalCards = await AnimalCard.find();
-        res.status(200).json(animalCards);
-    } catch (error) {
-        console.error("Error fetching animal cards:", error);
-        res.status(500).json({ message: "Internal Server Error" });
-    }
-});
+// app.get('/wildlife', async (req, res) => {
+//     try {
+//         console.log("Calling server")
+//         const animalCards = await AnimalCard.find();
+//         res.status(200).json(animalCards);
+//     } catch (error) {
+//         console.error("Error fetching animal cards:", error);
+//         res.status(500).json({ message: "Internal Server Error" });
+//     }
+// });
 
-app.get("/getPrograms",async(req,res)=>{
-    try {
-        console.log("Fetching programs from database");
-        const programs = await Program.find();
-        res.status(200).json(programs);
-    } catch (error) {
-        console.error("Error fetching programs:", error);
-        res.status(500).json({ message: "Internal Server Error" });
-    }
-})
+// app.get("/getPrograms",async(req,res)=>{
+//     try {
+//         console.log("Fetching programs from database");
+//         const programs = await Program.find();
+//         res.status(200).json(programs);
+//     } catch (error) {
+//         console.error("Error fetching programs:", error);
+//         res.status(500).json({ message: "Internal Server Error" });
+//     }
+// })
