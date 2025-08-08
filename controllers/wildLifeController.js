@@ -4,7 +4,6 @@ import AnimalCard from '../model/animalcard.js';
 
 export const getAllWildlife = async (req, res) => {
   try {
-    console.log("Fetching all wildlife data");
     const wildlife = await AnimalCard.find();
     res.status(200).json(wildlife);
   } catch (error) {

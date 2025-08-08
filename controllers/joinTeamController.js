@@ -1,6 +1,7 @@
 import JoinTeam from '../model/joinTeam.js';
 
 export const joinTeam = async (req, res) => {
+  console.log("Received join team request:", req.body);
   try {
     const { name, email, message } = req.body;
 

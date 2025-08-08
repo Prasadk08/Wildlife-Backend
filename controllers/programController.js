@@ -12,6 +12,7 @@ export const getAllPrograms = async (req, res) => {
 
 export const getProgramById = async (req, res) => {
   try {
+    console.log("Fetching program by ID:", req.params.id);
     const program = await Program.findById(req.params.id);
     if (!program) {
       return res.status(404).json({ message: "Program not found" });
