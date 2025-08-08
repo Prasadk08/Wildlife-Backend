@@ -12,6 +12,8 @@ export const joinTeam = async (req, res) => {
     const newMember = new JoinTeam({ name, email, message });
     await newMember.save();
 
+    console.log("New team member added:", newMember);
+
     res.status(201).json({ message: `${name}, thank you for showing interest in joining` });
   } catch (error) {
     console.error("Error joining team:", error);

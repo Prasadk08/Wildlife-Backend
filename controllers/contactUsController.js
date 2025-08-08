@@ -11,6 +11,7 @@ export const contactUss = async (req, res) => {
     const newContact = new ContactUs({ name, email, message });
     await newContact.save();
 
+
     res.status(201).json({ message: `${name}, our team will get back to you within 24 hrs.` });
   } catch (error) {
     console.error("Error in contact form:", error);
