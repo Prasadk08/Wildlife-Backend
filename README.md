@@ -1,15 +1,28 @@
 # wildlife-backend
 
-To install dependencies:
+# 🐾 Guardians of Wildlife - Backend
+
+This is the backend for the **Guardians of Wildlife** project. It provides APIs to manage wildlife information, government programs, contact forms, and volunteer join forms.
+
+## 🚀 Tech Stack
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Swagger (API Docs)
+- Morgan (Logger)
+
+## 📦 Installation
 
 ```bash
-bun install
-```
+git clone https://wildlife-backend-oo00.onrender.com
+cd guardians-backend
+npm install
+npm run dev
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.1.45. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+/controllers    -> Route logic
+/models         -> Mongoose schemas
+/routes         -> API routes
+/middlewares    -> Custom middlewares
+/utils          -> Utility functions
