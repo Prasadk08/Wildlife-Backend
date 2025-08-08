@@ -3,7 +3,7 @@ import { getAllWildlife } from "../controllers/wildLifeController.js";
 
 const router = express.Router();
 
-router.get("/", getAllWildlife);
+
 
 export default router;
 
@@ -30,7 +30,7 @@ export default router;
  *               items:
  *                 $ref: '#/components/schemas/Wildlife'
  */
-router.get('/', controller.getAllWildlife);
+router.get("/", getAllWildlife);
 
 
 
